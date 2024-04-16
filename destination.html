@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twiggy Travels</title>
+
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/f8b48650f6.js" crossorigin="anonymous"></script>
+    <style>
+
+
+        body {
+            font-family: Playfair Display;
+           width: 100%;
+           margin:0;
+           padding: 0;
+           font-size: large;
+            
+   
+        }
+        .container-fluid {
+            padding: 0;
+            margin: 0;
+        }
+        /* Upper Header Styles */
+.upper-header {
+    background-color: #B16952;
+    color: #ffffff;
+    padding: 5px 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+   
+
+}
+.container-fluid.upper-header {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        margin-top:0;
+        margin-bottom:0;
+     
+    }
+  .contact-info{
+    margin: 5px;
+  }
+.contact-info a {
+    color: white;
+  
+    padding:0;
+    margin: 5px 30px;
+}
+.contact-info > p > a:first-child {
+        border-right: 1px solid #FFFFFF; 
+        padding-right: 10px; 
+        margin-right: 20px; 
+        height: 20px;
+    }
+
+button {
+    color:white;
+    padding: 5px 20px;
+    background-color:#333;
+    border-top: 0;
+    border-bottom: 0;
+  border-radius: 0;
+  margin-right:30px ;
+}
+
+.dropdown-form {
+    display: none; 
+    width: 300px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #012060;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #012060;
+}
+
+
+    .form-group {
+        margin-bottom: 15px; 
+    }
+
+    /* Style for submit button */
+    .submit-btn {
+        display: block; 
+        width: 100%; 
+        padding: 10px 40px; 
+        background-color:#012060; 
+        border-color: #F23A16;
+        color: #fff; 
+        border: none; 
+        border-radius: 5px;
+        cursor: pointer; 
+    }
+
+    /* button container */
+    .btn-container {
+        text-align: center; 
+    }
+        /* Nav Bar Styles */
+     
+.navbar {
+    background-color: #F9F9F9;
+    border-bottom: 2px solid #B16952;
+    padding-top: 0px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
+}
+/* Phones */
+@media only screen and (max-width: 300px) {
+    .navbar-brand img {
+        max-height: 40px;
+        margin-left: 20px;
+    }
+}
+
+
+/* Tablets */
+@media only screen and (min-width: 301px) and (max-width: 992px) {
+    .navbar-nav .nav-link {
+        max-height: 30px;
+    }
+}
+
+/* Desktops */
+@media only screen and (min-width: 993px) {
+    .navbar-brand img {
+        max-height: 70px;
+        margin-left: 50px;
+    }
+}
+
+.navbar-brand img {
+    max-height: 100px;
+    width: auto;
+    margin-left: 38%;
+}
+
+.navbar-nav .nav-link {
+    margin-left: 50px;
+    justify-content: space-between;
+    color: black; 
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #B16952;
+   
+}
+ */
+#searchForm .btn {
+
+    border-color:white;
+
+    background-color: #333;
+    color: white;
+
+}
+
+/* dashboard */
+.dashbar {
+      display: list-item;
+        background-color: #333; 
+        color: white; 
+        padding: 10px; 
+    }
+
+    /* exploration */
+    
+    /*  image */
+.shadow-effect {
+    border-radius: 60px; 
+    width: 100%; 
+    max-width: 80%; 
+  
+}
+
+/* CSS for h1 */
+.text-begin {
+  border: 1px solid transparent;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  border-radius:60px ;
+  width: 100%;
+  max-height: 100%;
+}
+
+
+.h1 {
+    padding-left: 60px;
+    text-align: center;
+    width: 100%;
+    max-width: 80%;
+    font-size: 38px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    font-style:sans-serif;
+    margin-top: 60px;
+}
+/* wonders of coast */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    border: 20px;
+  }
+
+h2{
+    font-size: 35px;
+    font-style:sans-serif; 
+    font-weight: bold;  
+    margin-bottom: 30px;
+    justify-content: center;
+display: flex;
+flex-direction: row;
+}
+h3{
+    font-size: 35px;
+    font-style:sans-serif; 
+    font-weight: bold;  
+    margin-bottom: 30px;
+
+}
+/* Media query for responsiveness */
+@media (min-width: 768px) {
+    .column {
+        flex: 25%;
+        max-width: 25%;
+    }
+}
+
+.container-wonder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin: 0 10px; 
+  width: 100%;
+  margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+
+.card-body {
+  text-align: center; 
+}
+
+   /* Card Hovering */
+   .card:hover {
+    transform: scale(1.03);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.text-body{
+    text-wrap: wrap;
+}
+/* container chale */
+.container-wonder {
+    display: flex;
+    justify-content: center; 
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1; 
+  margin: 10px;
+  max-width: 100%;
+  
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.card img {
+  width: 100%;
+ 
+}
+   /* Card Hovering */
+   .card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.text-body{
+    text-wrap: wrap;
+}
+/* Container for the cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px;
+}
+
+/* Individual card styling */
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+   
+}
+
+/* VIP Section */
+.vip-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#B16952;
+    padding: 30px;
+    text-align: center;
+   
+    
+}
+
+/* VIP Heading */
+.vip-heading {
+    font-size: 30px;
+
+    font-weight: bold;
+    margin-bottom: 1lvb;
+    color:black;
+}
+
+/* VIP Description */
+.vip-description {
+    font-style:sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color:white;
+}
+
+/* hotels */
+.trip-information {
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-information h5 {
+    margin-bottom: 15px;
+    color: black; 
+}
+
+.trip-information ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.trip-information li {
+    margin-bottom: 10px; 
+    color: #495057; 
+    text-align: start;
+}
+
+.trip-information li strong {
+    font-weight: bold;
+}
+
+/* card top */
+.card-img-top {
+    width: 100%;
+    height: auto; 
+}
+
+   /* Customize testimonial card container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Section title enhancement */
+h1.text-center {
+    color:black; 
+    margin-bottom: 20px; 
+    font-size: 32px; 
+}
+
+/* Text color for the descriptive paragraph under the title */
+p {
+    color: #333; 
+    line-height: 1.6; 
+}
+
+/* Enhancements to the testimonials cards */
+.col {
+    padding: 15px;
+}
+
+.border {
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+.border:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+}
+
+/* Padding inside each testimonial block */
+.p-4 {
+    padding: 20px; 
+}
+
+/* Style adjustments for the author section */
+.author-image {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 100px;  
+    height: 100px;
+    object-fit: cover; 
+    border-radius: 50%; 
+    flex-shrink: 0;
+}
+
+h5, p.text-muted {
+    margin: 0;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .author-image {
+        width: 50px;
+        height: 50px; 
+    }
+}
+/* footer */
+
+
+footer {
+    background-color: #B16952;
+    background-size: cover; 
+    color: white;
+    text-align: center;
+}
+    
+        footer
+
+        .footer-links {
+            color: #f0f0f0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        footer .container {
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color:black;
+        }
+
+        .social-icons-footer a {
+            color: #fff; /* White color for social icons */
+            font-size: 24px; /* Adjust size of social icons */
+            margin: 0 10px; /* Add spacing between icons */
+        }
+
+      .social-icons-footer a{
+        margin: 20px;
+      }
+.footer-text-center{
+    background-color: #B16952;
+}
+
+
+footer ul {
+            padding-left: 0; /* Remove default padding */
+        }
+        footer ul li {
+            list-style: none; /* Remove default list styles */
+        }
+        footer a {
+            color: #fff; /* White color for links */
+        }
+        footer a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            color: #ccc; /* Lighter color on hover */
+        }
+
+  /* Add space between footer columns */
+footer .col-md-3 {
+    margin-bottom: 30px; /* Adjust the value as needed */
+    
+}
+
+
+    </style>
+    <!-- upper header -->
+ <div class="container-fluid upper-header">
+   <!-- Contact Information -->
+   <div class="contact-info">
+       <p class="mb-0">
+           <a href="contact-info" style="text-decoration: none; color:white">Twiggy Travels, Let Us Explore.  </a>
+           <a href="+254111280938" style="text-decoration: none; color: #F9F9F9;">Tel: +254111280938 
+   
+           <a href="info@twiggytravels.com" style="text-decoration: none; color: #F9F9F9;">info@twiggytravels.com 
+    
+           <a href="https://www.instagram.com/twigytravel?igsh=YTFyNDZhb3R6cTRk" style="text-decoration: none;"><i class="fab fa-instagram" style="color: #F9F9F9;"></i></a>
+           <a href="https://www.facebook.com/profile.php?id=100087756217898&mibextid=LQQJ4d" style="text-decoration: none;"><i class="fab fa-facebook" style="color: #F9F9F9;"></i></a>
+       </p>
+   </div>
+   <div class="contact-btn">
+       <button class="#">Contact</button>
+   </div>
+</div>
+<!-- end of upper header -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg mx-auto colored-margin">
+    <a class="navbar-brand" href="#">
+        <img src="/desimages/logo1.png" alt="Twiggy Travels Logo"><span class="logo-text"></span>
+    </a>
+    <button class="navbar-toggler" id="toggleDashbar" aria-label="Toggle Dashbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownDestination" aria-haspopup="true" aria-expanded="false">
+                    Home
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownDestination">
+                    <a class="dropdown-item" href="#">Europe</a>
+                    <a class="dropdown-item" href="#">Asia</a>
+                    <a class="dropdown-item" href="#">Africa</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHolidayTypes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Destinations
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownHolidayTypes">
+                    <a class="dropdown-item" href="#">Beach</a>
+                    <a class="dropdown-item" href="#">Adventure</a>
+                    <a class="dropdown-item" href="#">City Breaks</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOffers" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Packages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownOffers">
+                    <a class="dropdown-item" href="#">Special Deals</a>
+                    <a class="dropdown-item" href="#">Seasonal Offers</a>
+                    <a class="dropdown-item" href="#">Discount Packages</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Our Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                    <a class="dropdown-item" href="#">About Us</a>
+                    <a class="dropdown-item" href="#">Travel Planning</a>
+                    <a class="dropdown-item" href="#">Accommodation</a>
+                    <a class="dropdown-item" href="#">Transportation</a>
+                    <a class="dropdown-item" href="#">Guided Tours</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle contact-dropdown" href="#" id="navbarDropdownContact" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contact Us
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownContact">
+                    <div class="dropdown-item-text">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</p>
+                        <p><i class="fas fa-phone-alt"></i> +1234567890</p>
+                        <p><i class="fas fa-envelope"></i> Email:info@twiggytravels.com</p>
+                    </div>
+                </div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle blog-dropdown" href="#" id="navbarDropdownBlog" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Blog
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
+                    <a class="dropdown-item" href="#">Travel Tips</a>
+                    <a class="dropdown-item" href="#">Destination Guides</a>
+                    <a class="dropdown-item" href="#">Adventure Stories</a>
+                    <a class="dropdown-item" href="#">Cultural Experiences</a>
+                </div>
+            </li>
+        </ul>
+        <form class="d-flex" id="searchForm" role="search">
+            <input class="form-control me-2" type="search" id="searchInput" placeholder="Available Packages" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<!-- exploration -->
+    
+<div class="container mt-5">
+    <!-- Header with Two Columns -->
+    <header class="row text-center my-4 justify-content-center d-flex">
+        <div class="text-begin col-md-6">
+            <h1 class="h1 text-center">Begin your Journey, Enjoy!</h1>
+            <p>"Escape to the enchanting coast of Kenya with us, where azure waters <br>golden sands beckon. Dive into exhilarating safaris, indulge in beachside <br>bliss, and immerse yourself in the vibrant local culture. Let us whisk you away on a journey of discovery and relaxation, where every moment is filled with joy and wonder. Book now and let the magic of Kenya's coast unfold before your eyes."</p>
+
+            <div class="text-center">
+                <a href="https://www.example.com" class="btn btn-dark btn-lg">Explore Available Offers</a>
+            </div>
+        </div>
+        <div class="col-md-6 mt-4">
+            <!-- Placeholder image with shadow effect and reflection -->
+            <div class="image-container">
+                <img src="/desimages/bgmai.jpeg" class="img-fluid shadow-effect" alt="Placeholder Image">
+                <div class="reflection"></div>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+<!-- div column -->
+<div class="container-wonder text-center mt-5">
+    <div class="container text-center justify-content-center d-flex">
+        <h2>Journey into Kenya’s untamed wonder.</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/desimages/beatif.jpeg" class="card-img-top" alt="Malindi Beach Resort">
+                    <div class="card-body">
+                        <h5><b>Hells Kitchen</b></h5>
+                        <p class="text-body mt-3">Journey to Hells Kitchen: stunning landscapes, vibrant culture, and endless adventure await you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/desimages/park.jpeg" class="card-img-top" alt="Malindi Beach Resort">
+                    <div class="card-body">
+                        <h5><b>National Museum</b></h5>
+                        <p class="text-body mt-3">Experience Nairobi’s raw beauty; marvel at wildlife, lush landscapes. Your adventure starts here.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/desimages/twig.jpeg" class="card-img-top" alt="Malindi Beach Resort">
+                    <div class="card-body">
+                        <h5><b>Creek</b></h5>
+                        <p class="text-body mt-3">Golden sunrises, tranquil waves, and palm-fringed horizons await. Join us on a coastal odyssey!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/desimages/gabb.jpeg" class="card-img-top" alt="Malindi Beach Resort">
+                    <div class="card-body">
+                        <h5><b>Marafa Canyons</b></h5>
+                        <p class="text-body mt-3">Embrace Mombasa’s serene beauty: majestic terrains, lush greenery, and tranquil skies await you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/desimages/girr.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                    <div class="card-body">
+                        <h5><b>Giraffe</b></h5>
+                        <p>Giraffes gracefully roam, inviting you to join their wild safari adventure today.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/desimages/elep.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                    <div class="card-body">
+                        <h5><b>Elephant</b></h5>
+                        <p>Encounter the awe-inspiring grace of elephants in their untamed realm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/desimages/leo.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                    <div class="card-body">
+                        <h5><b>Leopard</b></h5>
+                        <p>Discover the majestic leopard perched high, beckoning you to our wild adventure.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="/desimages/lio.webp" class="card-img-top" alt="Malindi Beach Resort">
+                    <div class="card-body">
+                        <h5><b>Lions</b></h5>
+                        <p>Lions beckon: Join our thrilling safari, where the wild roars with enchantment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Start of discover Section -->
+<div class="container vip-section mt-5">
+    <div class="row">
+        <div class="col-md-12 flex-column">
+            <div class="description-container text-center">
+                <h1 class="vip-heading mb-2">Discover the Healing Power of Beaches</h1>
+                <p class="vip-description">Let the sand cradle your feet, and the ocean’s rhythm soothe your soul. Visiting the beach isn’t just a getaway; it’s a prescription for well-being. Dive into ‘Blue Space’—where nature heals.</p>
+                <div class="text-center mb-3">
+                    <a href="https://www.example.com" class="btn btn-dark btn-lg">Explore Available Offers</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Available  -->
+
+<div class="container mt-5 travel-december-cards ">
+    <div class="container text-center justify-content-center d-flex">
+        <h3>Malindi Beach Resort</h3>
+        <!-- Your other content goes here -->
+    </div>
+    <div class="row">
+        <!-- December Card 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/voy.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Malindi & Watamu</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 18,000</b></h5>
+                    </ul>
+                </div>
+                
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- December Card 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/bam.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Malindi & Watamu</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 36000</b></h5>
+                    </ul>
+                </div>
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">                                                                                               
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- December Card 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/ser.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Malindi & Watamu</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 36000</b></h5>
+                    </ul>
+                </div>
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Available  -->
+
+<div class="container mt-5 travel-december-cards ">
+    <div class="container text-center justify-content-center d-flex">
+        <h3>Diani/Ukunda</h3>
+        <!-- Your other content goes here -->
+    </div>
+    <div class="row">
+        <!-- December Card 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/southern.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Diani/Ukunda</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 37,000</b></h5>
+                    </ul>
+                </div>
+                
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- December Card 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/sea.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong>Diani/Ukunda</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 36000</b></h5>
+                    </ul>
+                </div>
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- December Card 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/baobab.png" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Diani/Ukunda</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 36000</b></h5>
+                    </ul>
+                </div>
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Available  -->
+
+<div class="container mt-5 travel-december-cards ">
+    <div class="container text-center justify-content-center d-flex">
+        <h3>Mombasa North Coast</h3>
+        <!-- Your other content goes here -->
+    </div>
+    <div class="row">
+        <!-- December Card 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/nap.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Mombasa North Coast</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 26,000</b></h5>
+                    </ul>
+                </div>
+                
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- December Card 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/nap.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong>Mombasa North Coast</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 29,300</b></h5>
+                    </ul>
+                </div>
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- December Card 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/mn.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Mombasa North Coast</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 25,300</b></h5>
+                    </ul>
+                </div>
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Available  -->
+
+<div class="container mt-5 travel-december-cards ">
+    <div class="container text-center justify-content-center d-flex">
+        <h3>Explore More</h3>
+        <!-- Your other content goes here -->
+    </div>
+    <div class="row">
+        <!-- December Card 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/silver.png" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Lamu</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 36000</b></h5>
+                    </ul>
+                </div>
+                
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- December Card 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/flamingo.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong> Lamu</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 36000</b></h5>
+                    </ul>
+                </div>
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- December Card 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/desimages/diamond.jpg" class="card-img-top" alt="Malindi Beach Resort">
+                <div class="trip-information">
+                    <h5><b>TRIP INFORMATION</b></h5>
+                    <ul class="list-styled">
+                        <li><strong>Location:</strong>Lamu</li>
+                        <li><strong>Duration:</strong> 3 Days</li>
+                        <li><strong>Inclusions:</strong> Free Sightseeing & Hotel</li>
+                        <h5 class="text-primary"><b>Starting from Ksh 36000</b></h5>
+                    </ul>
+                </div>
+                <div class="button-form mt-5">
+                <form action="https://www.example.com">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Testimonials Section --><!-- Testimonials Section -->
+<section class="bg-white">
+    <div class="container px-4 py-5">
+        <h1 class="text-center text-blue">What our <span class="text-blue">clients</span> say</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-5">
+            <div class="col">
+                <div class="p-4 border rounded">
+                    <p class="text-muted">“My wild safari experience with Twiggy Travels was nothing short of incredible! From encountering majestic wildlife to breathtaking landscapes, every moment was filled with excitement and wonder. A truly unforgettable adventure!.”</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" class="rounded-circle author-image me-3" alt="Robert's Photo">
+                        <div>
+                            <h5 class="mb-0">Robert</h5>
+                            <p class="mb-0 text-muted">CTO, Robert Consultancy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-4 border rounded">
+                    <p class="text-muted">"Visiting ancient places with Twiggy Travels was like stepping back in time. The rich history and culture brought to life by knowledgeable guides made the experience truly fascinating and engaging. A must-do for history enthusiasts!"
+                    </p>
+                    <div class="d-flex align-items-center mt-4">
+                        <img src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" class="rounded-circle author-image me-3" alt="Jeny Doe's Photo">
+                        <div>
+                            <h5 class="mb-0">Jeny Doe</h5>
+                            <p class="mb-0 text-muted">CEO, Jeny Consultancy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-4 border rounded">
+                    <p class="text-muted">"The customer service at Twiggy Travels exceeded all expectations. Friendly staff, personalized attention, and a genuine commitment to customer satisfaction made my trip smooth and enjoyable. I felt valued and well-cared for throughout. Highly recommended!"</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <img src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="rounded-circle author-image me-3" alt="Ema Watson's Photo">
+                        <div>
+                            <h5 class="mb-0">Ema Watson</h5>
+                            <p class="mb-0 text-muted">Marketing Manager at Stech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-white py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Your booking</h4>
+                <hr>
+                <ul class="list-unstyled">
+                    <li><a href="#">My booking</a></li>
+                    <li><a href="#">Agent login</a></li>
+                    <li><h4 class="mt-4">Inspiration</h4></li>
+                    <li><a href="#">Explore new tours</a></li>
+                    <li><a href="#">Where to go when</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-3">
+                <h4>Here to help</h4>
+                <ul class="list-unstyled">
+                    <!-- Add your list items here -->
+                </ul>
+            </div>
+            
+            <div class="col-md-3">
+                <h4>About Twiggy Travels</h4>
+                <ul class="list-unstyled">
+                    <!-- Add your list items here -->
+                </ul>
+            </div>
+            
+            <div class="col-md-3">
+                <h4>Get in touch</h4>
+                <ul class="list-unstyled">
+                    <!-- Add your list items here -->
+                </ul>
+                <div class="social-icons-footer justify-content-center d-flex text-center mt-4">
+                    <a href="https://www.instagram.com/twigytravel?igsh=YTFyNDZhb3R6cTRk" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100087756217898&mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="mb-0">© 2024 Twiggy Travels Ltd. All Rights Reserved | Powered by <a href="#" class="text-dark">Getrude Kipkemoi</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+
+
+<!-- bootrap links -->
+<a href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></a>
+
+
+
+
+
+
+
+</body>
+</html>
+<!-- Photo by <a href="https://unsplash.com/@hgudka97?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Harshil Gudka</a> on <a href="https://unsplash.com/photos/gray-elephant-standing-beside-swing-pole-during-daytime-cHMPGlV-78c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+  
